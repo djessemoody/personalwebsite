@@ -55,3 +55,99 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
 }
+.btn-orange {
+  color: #222;
+  background-color: rgba(234, 106, 32, 0.5);
+  border-color: white;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange.focus,
+.btn-orange:active,
+.btn-orange.active,
+.open > .dropdown-toggle.btn-orange {
+  color: #222;
+  background-color: rgba(220, 94, 21, 0.5);
+  border-color: #ededed;
+}
+.btn-orange:active,
+.btn-orange.active,
+.open > .dropdown-toggle.btn-orange {
+  background-image: none;
+}
+.btn-orange.disabled,
+.btn-orange[disabled],
+fieldset[disabled] .btn-orange,
+.btn-orange.disabled:hover,
+.btn-orange[disabled]:hover,
+fieldset[disabled] .btn-orange:hover,
+.btn-orange.disabled:focus,
+.btn-orange[disabled]:focus,
+fieldset[disabled] .btn-orange:focus,
+.btn-orange.disabled.focus,
+.btn-orange[disabled].focus,
+fieldset[disabled] .btn-orange.focus,
+.btn-orange.disabled:active,
+.btn-orange[disabled]:active,
+fieldset[disabled] .btn-orange:active,
+.btn-orange.disabled.active,
+.btn-orange[disabled].active,
+fieldset[disabled] .btn-orange.active {
+  background-color: rgba(234, 106, 32, 0.5);
+  border-color: white;
+}
+.btn-orange .badge {
+  color: rgba(234, 106, 32, 0.5);
+  background-color: #222;
+}
+.btn-orange:hover {
+  color: #222;
+  background-color: #ea6a20;
+  border-color: white;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.btn-orange:hover:hover,
+.btn-orange:hover:focus,
+.btn-orange:hover.focus,
+.btn-orange:hover:active,
+.btn-orange:hover.active,
+.open > .dropdown-toggle.btn-orange:hover {
+  color: #222;
+  background-color: #dc5e15;
+  border-color: #ededed;
+}
+.btn-orange:hover:active,
+.btn-orange:hover.active,
+.open > .dropdown-toggle.btn-orange:hover {
+  background-image: none;
+}
+.btn-orange:hover.disabled,
+.btn-orange:hover[disabled],
+fieldset[disabled] .btn-orange:hover,
+.btn-orange:hover.disabled:hover,
+.btn-orange:hover[disabled]:hover,
+fieldset[disabled] .btn-orange:hover:hover,
+.btn-orange:hover.disabled:focus,
+.btn-orange:hover[disabled]:focus,
+fieldset[disabled] .btn-orange:hover:focus,
+.btn-orange:hover.disabled.focus,
+.btn-orange:hover[disabled].focus,
+fieldset[disabled] .btn-orange:hover.focus,
+.btn-orange:hover.disabled:active,
+.btn-orange:hover[disabled]:active,
+fieldset[disabled] .btn-orange:hover:active,
+.btn-orange:hover.disabled.active,
+.btn-orange:hover[disabled].active,
+fieldset[disabled] .btn-orange:hover.active {
+  background-color: #ea6a20;
+  border-color: white;
+}
+.btn-orange:hover .badge {
+  color: #ea6a20;
+  background-color: #222;
+}

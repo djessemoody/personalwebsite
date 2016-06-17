@@ -542,17 +542,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/Gruntfile.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/Gruntfile.js",
-		"outputAbbreviatedPath": "\/min\/Gruntfile-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/img\/Family.png": {
 		"fileType": 32768,
 		"ignore": 0,

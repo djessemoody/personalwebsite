@@ -58,3 +58,11 @@ header {
         }
     }
 }
+
+// Button Styles
+.btn-orange {
+    .button-variant(@theme-dark;rgba(234,106,32,.5);white);
+    &:hover {
+        .button-variant(@theme-dark;rgba(234,106,32,1);white);
+    }
+}
