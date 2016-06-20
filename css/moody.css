@@ -1,16 +1,15 @@
 header {
   position: relative;
-  width: 100%;
   min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
   -o-background-size: cover;
   z-index: -1;
   background: url('../img/woodpicHD.jpg') no-repeat center center fixed;
-  background-attachment: fixed !important;
-  background-size: cover !important;
+  width: 100%;
+  height: 100%;
   background-attachment: fixed;
+  background-size: cover;
   text-align: center;
   color: white;
 }
