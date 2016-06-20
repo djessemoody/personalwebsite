@@ -4,9 +4,11 @@ header {
   min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  background-size: cover;
   -o-background-size: cover;
   background: url('../img/woodpicHD.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-attachment: fixed !important;
+  background-size: cover !important;
   background-attachment: fixed;
   text-align: center;
   color: white;
