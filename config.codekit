@@ -564,6 +564,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/macbookphoto_unsplash.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.71209e+06,
+		"inputAbbreviatedPath": "\/img\/macbookphoto_unsplash.jpeg",
+		"outputAbbreviatedPath": "\/img\/macbookphoto_unsplash.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/macbookphoto_unsplash2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 285420,
+		"inputAbbreviatedPath": "\/img\/macbookphoto_unsplash2.jpg",
+		"outputAbbreviatedPath": "\/img\/macbookphoto_unsplash2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/portfolio\/fullsize\/1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

@@ -6,13 +6,13 @@
     background: url('../img/woodpicHD.jpg') no-repeat center center fixed;
     background-attachment: fixed;
     background-size: cover;
-    z-index: -1; 
+    z-index: -2; 
     position: fixed;
     top: 0; 
     left: 0; 
     /* Preserve aspect ratio */
     min-width: 100%;
-    min-height: 100%
+    min-height: 100%;
 }
 
 header {
@@ -71,13 +71,43 @@ header {
     }
 }
 
-#skills,#portfolio,#contact,#footer {
+
+
+
+#skills,#portfolio {
     background: white;
     
 }
+
+#contact,#footer {
+    color: white;
+}
+
+.Bottom {
+    background: url('../img/macbookphoto_unsplash2.jpg') no-repeat center center fixed;
+    background-size: cover;
+     h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    hr {
+        margin: 30px auto;
+    }
+    p {
+        font-weight: 300;
+        color: fade(white, 70%);
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+   
+}
+
 // Button Styles
 .btn-orange {
     .button-variant(@theme-dark;rgba(234,106,32,.5);white);
+    color: white;
     &:hover {
         .button-variant(@theme-dark;rgba(234,106,32,1);white);
     }

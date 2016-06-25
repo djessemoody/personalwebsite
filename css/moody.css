@@ -2,7 +2,7 @@
   background: url('../img/woodpicHD.jpg') no-repeat center center fixed;
   background-attachment: fixed;
   background-size: cover;
-  z-index: -1;
+  z-index: -2;
   position: fixed;
   top: 0;
   left: 0;
@@ -67,10 +67,31 @@ header .header-content .header-content-inner p {
   }
 }
 #skills,
-#portfolio,
+#portfolio {
+  background: white;
+}
 #contact,
 #footer {
-  background: white;
+  color: white;
+}
+.Bottom {
+  background: url('../img/macbookphoto_unsplash2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.Bottom h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.Bottom hr {
+  margin: 30px auto;
+}
+.Bottom p {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin-bottom: 50px;
 }
 .btn-orange {
   color: #222;
@@ -79,6 +100,7 @@ header .header-content .header-content-inner p {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
+  color: white;
 }
 .btn-orange:hover,
 .btn-orange:focus,
