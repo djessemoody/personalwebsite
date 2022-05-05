@@ -5,7 +5,7 @@ from google.auth.transport.requests import Request
 from google.protobuf import service
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
-
+from bs4 import BeautifulSoup
 
 
 
@@ -26,7 +26,26 @@ while done is False:
     print("Download %d%%." % int(status.progress() * 100))
 file_name = os.path.abspath("/home/pi/personalwebsite/index.html")
 f = open(file_name, 'wb')
+
 f.write(fh.getvalue())
+
+# load the file
+with open("/home/pi/personalwebsite/index.html") as inf:
+    txt = inf.read()
+    soup = BeautifulSoup(txt, 'html.parser')
+
+
+def a_href(url, label='', target='_blank', **kwargs):
+    soup = BeautifulSoup('', 'html.parser')
+    combined_attrs = dict(target=target, href=url, **kwargs)
+    tag = soup.new_tag(name='a', attrs=combined_attrs)
+    tag.string = label
+    return tag  # or tag.prettify() for better formatting
+
+soup.body.append(a_href("https://github.com/djessemoody/personalwebsite/blob/master/pythonFileUpload.py",label="Check out the super simple script that grabs this from google docs and uploads it to moodyiii.com here"))
+
+with open("/home/pi/personalwebsite/index.html", "w") as outf:
+    outf.write(str(soup.prettify()))
 
 
 from git import Repo
