@@ -61,7 +61,7 @@ def a_href(url, label='', target='_blank', **kwargs):
 
 soup.body.append(
     a_href("https://github.com/djessemoody/personalwebsite/blob/master/pythonFileUpload.py",
-    label="Check out the script that grabs this from google docs and uploads it to moodyiii.com here"))
+    label="Check out the daily script to grab this from my resume doc and upload it here"))
 
 with open(git_file_location, "w") as outf:
     outf.write(str(soup.prettify()))
