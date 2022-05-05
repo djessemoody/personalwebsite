@@ -11,6 +11,10 @@ from bs4 import BeautifulSoup
 
 
 file_id = '1guHKDs7FE9oGoHrOfuNjKIeNRQeO6NWY51h4bS_z9fk'
+git_file_location = '/home/pi/personalwebsite/index.html'
+PATH_OF_GIT_REPO = r'/home/pi/personalwebsite/.git'
+COMMIT_MESSAGE = 'Auto Update'
+
 creds = None
 drive_service = build('drive', 'v3', credentials=creds)
 request = drive_service.files().export_media(fileId=file_id,
@@ -24,13 +28,13 @@ name = drive_service.files().get(fileId=file_id).execute()['name']
 while done is False:
     status, done = downloader.next_chunk()
     print("Download %d%%." % int(status.progress() * 100))
-file_name = os.path.abspath("/home/pi/personalwebsite/index.html")
+file_name = os.path.abspath(git_file_location)
 f = open(file_name, 'wb')
 
 f.write(fh.getvalue())
 
 # load the file
-with open("/home/pi/personalwebsite/index.html") as inf:
+with open(git_file_location) as inf:
     txt = inf.read()
     soup = BeautifulSoup(txt, 'html.parser')
 
@@ -42,23 +46,23 @@ def a_href(url, label='', target='_blank', **kwargs):
     tag.string = label
     return tag  # or tag.prettify() for better formatting
 
-soup.body.append(a_href("https://github.com/djessemoody/personalwebsite/blob/master/pythonFileUpload.py",label="Check out the super simple script that grabs this from google docs and uploads it to moodyiii.com here"))
+soup.body.append(a_href("https://github.com/djessemoody/personalwebsite/blob/master/pythonFileUpload.py",label="Check out the script that grabs this from google docs and uploads it to moodyiii.com here"))
 
-with open("/home/pi/personalwebsite/index.html", "w") as outf:
+with open(git_file_location, "w") as outf:
     outf.write(str(soup.prettify()))
 
 
 from git import Repo
 
-PATH_OF_GIT_REPO = r'/home/pi/personalwebsite/.git'  # make sure .git folder is properly configured
-COMMIT_MESSAGE = 'Auto Update'
+
 
 def git_push():
     try:
         repo = Repo(PATH_OF_GIT_REPO)
+        origin = repo.remote(name='origin')
+        origin.pull()
         repo.git.add(update=True)
         repo.index.commit(COMMIT_MESSAGE)
-        origin = repo.remote(name='origin')
         origin.push()
     except BaseException as err:
         print('Some error occured while pushing the code')
